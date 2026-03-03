@@ -1,0 +1,37 @@
+paths:
+  depth_segy_path: "/Users/ipsitabhar/Downloads/Tutorial/Seismic_Depth/BN_Depth_Seismic.sgy"
+  wells_csv_path: "/Users/ipsitabhar/Downloads/Tutorial/Wells/well_locations.txt"
+  velocity_cube_path: "/Users/ipsitabhar/Downloads/Tutorial/Velocity_Cube/BN_Velocity_from_OpendTect.sgy"
+
+  # plots_boundary_dir: "/slimdata/ibhar3_data/Seismic_Curation/Dataset_TB_1997seis0001/Plots/Boundary_wells_splines"
+  # plots_downsampled_seis_dir: "/slimdata/ibhar3_data/Seismic_Curation/Dataset_TB_1997seis0001/Plots/Downsampled_seismic/3_wells"
+  # plots_seis_well_tie_dir: "/slimdata/ibhar3_data/Seismic_Curation/Dataset_TB_1997seis0001/Plots/Seis_well_tie"
+  #h5_output_dir: "/slimdata/tunadata/ukndr_process/ukndr/saved_h5_files"
+  figures_dir: "/Users/ipsitabhar/Downloads/Tutorial/figures"
+  # Optional: LAS file mapping by well nickname suffix (A..L)
+  las_paths:
+    A: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30-_2_jwl_JWL_FILE_312137220.las"
+    B: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30-_5_jwl_JWL_FILE_312137241.las"
+    C: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30-_7_jwl_JWL_FILE_312137262.las"
+    D: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30a-_8_jwl_JWL_FILE_311426203.las"
+    E: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30a-_9_jwl_JWL_FILE_312137310.las"
+    F: "/Users/ipsitabhar/Downloads/Tutorial/Wells/11_30a-_10_jwl_JWL_FILE_312137283.las"
+
+process:
+  dataset_name: "Cube"
+  max_depth_m: 3200.0
+  resample_nz: 256
+  resample_nx: 512
+  num_splines_to_process: 5
+  ricker_duration_s: 0.128
+  ricker_dt_s: 0.001
+  ricker_f0_hz: 25.0
+  spline_orders:
+    3: 20     # C(6,3) = 20
+    4: 15    # C(6,4) = 15
+    5: 6    # C(6,5) = 6
+    6: 1    # C(6,6) = 1
+  spline_extension_seed: 2025
+  spline_extension_max_m: 2500.0
+  # Optional: restrict processing to specific well nicknames
+  # target_wells: ["A", "G", "B"]

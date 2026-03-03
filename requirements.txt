@@ -1,0 +1,10 @@
+lasio==0.32
+matplotlib==3.10.7
+numpy==2.3.5
+pandas==2.3.3
+scipy==1.16.3
+segyio==1.9.13
+segysak==0.5.4
+tqdm==4.67.1
+wellpathpy==0.5.2
+xarray==2025.10.1
