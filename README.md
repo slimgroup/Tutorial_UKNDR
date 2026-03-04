@@ -9,3 +9,23 @@ This repository contains scripts and workflows for:
 - Working with SEG-Y seismic datasets
 - Training data preparation in HDF5 file formats
 - Visualization and analysis
+
+## Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/slimgroup/Tutorial_UKNDR.git
+cd Tutorial_UKNDR
+
+### Create virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
