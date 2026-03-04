@@ -29,6 +29,7 @@ source venv/bin/activate
 
 ```bash
 pip install -r requirements.txt
+```
 
 ## Data Policy
 
