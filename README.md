@@ -29,3 +29,15 @@ source venv/bin/activate
 
 ```bash
 pip install -r requirements.txt
+
+## Data Policy
+
+Large seismic files (SEG-Y, HDF5, etc.) are not included in this repository.
+
+Please store raw data separately.
+
+This repository is intended for tutorial and research purposes related to:
+
+- Seismic data curation
+- Well-log processing
+- Machine learning workflows in geophysics
